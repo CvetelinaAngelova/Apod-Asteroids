@@ -6,11 +6,10 @@ import "./style.css";
 import AsteroidCard from "../../components/AsteroidCard/index";
 
 const AsteroidContainer = ({ data }) => {
-  console.log(data);
   return (
     <div>
       {Object.keys(data).map((itemData, index) => (
-        <div key="{itemData.index}">  
+        <div >  
           <div className="asteroidTableTitle">For Date {itemData}</div>
           <Table  striped hover variant="dark" responsive>
             <thead>
