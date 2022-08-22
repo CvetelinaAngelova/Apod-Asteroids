@@ -1,0 +1,183 @@
+:root {
+    --grey: #808080;
+  }
+  
+  * {
+    /*   border: 1px solid white; */
+    box-sizing: border-box;
+    color: white;
+    font-family: Montserrat;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    
+  }
+  body .container {
+    width: 100%;
+    
+  }
+  body #root{
+    background-color: #222;
+  }
+   main {
+    height: 100vh;
+  }
+  header{
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    top:0;
+  }
+  header.nested{
+    position: relative;
+  }
+
+    header .header-nav {
+      padding: 8px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+  }
+
+    header .header-nav #nav_container  {
+    position: relative;
+  } 
+
+   header .brand_area {
+    background: url(https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 90px;
+    width: 90px;
+    margin: 5px;
+    z-index: 100;
+  }
+  
+    header .navbar {
+    align-items: center;
+    display: none;
+    text-align: right;
+    margin-right: 30px;
+    z-index: 100;
+  }
+  header .navbar.showMenu {
+    display: block;
+    display: block;
+    width: 100%;
+    position: relative;
+    top: 70px;
+    right: 0;
+  }
+  .showMenu .devidedr{
+   display: none;
+  }
+
+   header nav a, header nav a:hover {
+    font-size: 17px;
+    font-weight: 300;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color:#fff;
+  }
+
+h3 {
+  font-family: courier;
+  text-align: center;
+}
+
+
+.showMenu a {
+  background: #0b3d91;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.header-wrapper{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+  font-size: 0;
+  position: absolute;
+  top: 20px;
+ right: 20px;
+}
+  .hamburger:hover {
+    opacity: 0.7; }
+  .hamburger.is-active:hover {
+    opacity: 0.7; }
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after {
+    background-color: #fff;}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -10px; }
+  .hamburger-inner::after {
+    bottom: -10px; }
+
+/*
+   * Slider Reverse
+   */
+   .hamburger--slider-r .hamburger-inner {
+    top: 2px; }
+    .hamburger--slider-r .hamburger-inner::before {
+      top: 10px;
+      transition-property: transform, opacity;
+      transition-timing-function: ease;
+      transition-duration: 0.15s; }
+    .hamburger--slider-r .hamburger-inner::after {
+      top: 20px; }
+  
+  .hamburger--slider-r.is-active .hamburger-inner {
+    transform: translate3d(0, 10px, 0) rotate(-45deg); }
+    .hamburger--slider-r.is-active .hamburger-inner::before {
+      transform: rotate(45deg) translate3d(5.71429px, -6px, 0);
+      opacity: 0; }
+    .hamburger--slider-r.is-active .hamburger-inner::after {
+      transform: translate3d(0, -20px, 0) rotate(90deg); }
+  

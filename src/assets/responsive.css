@@ -1,0 +1,35 @@
+@media only screen and (min-width: 768px) {
+  
+
+  } 
+  
+  @media only screen and (min-width: 1024px) {
+
+  
+     header .header-nav-area #nav_container  {
+      display:flex;
+    }
+  
+  
+    header .wrapper .article footer {
+      display: block;
+    }
+    header .header-nav #nav_container  {
+      justify-content: flex-end;
+    } 
+    header nav a, header nav a:hover{
+      font-size: 19px;
+    }
+    .hamburger{
+      display: none;
+    }
+    .navbar#nav{
+      display: flex;
+      width: auto;
+    }
+    header .navbar {
+      display: flex;
+    }
+
+  } 
+  
