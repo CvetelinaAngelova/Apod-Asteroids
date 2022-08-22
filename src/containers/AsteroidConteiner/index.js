@@ -9,7 +9,7 @@ const AsteroidContainer = ({ data }) => {
   return (
     <div>
       {Object.keys(data).map((itemData, index) => (
-        <div >  
+        <div key={itemData}>  
           <div className="asteroidTableTitle">For Date {itemData}</div>
           <Table  striped hover variant="dark" responsive>
             <thead>
@@ -23,7 +23,7 @@ const AsteroidContainer = ({ data }) => {
             </thead>
             <tbody>
               {data[itemData].map((item) => (
-                <AsteroidCard astData={item} />
+                <AsteroidCard astData={item} key={item.id} />
               ))}
             </tbody>
           </Table>
